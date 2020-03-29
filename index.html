@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="styless.css">
+</head>
+
+<body ng-app="formApp" ng-controller="ControllerProfile">
+    <div id="background-wrap">
+         <div class="x1">
+        <div class="cloud"></div>
+    </div>
+     
+    <!-- views will be injected here -->
+    <div class="input">
+      <input type="text" ng-model="city" placeholder="Enter the city">
+      <input  type="button" value="search" ng-click="findWeather()">
+    </div>
+
+        <!-- {{printWeatherDetails}} -->
+        <br>
+<div ng-show="one">
+    <div class="card">
+      <br>
+      <h4>
+        <label>Temperature:</label>{{temperature}}<span>&#8451;</span><br>
+        <br>
+        
+        <label>Description:</label>{{weather}}<br>
+        <br>
+        <label>Icon:</label>{{icon}}<i class="far fa-cloud"></i><br>
+        <br>
+        <label>Country:</label>{{country}}<br>
+        <br>
+      <img src="https://www.countryflags.io/{{country}}/flat/64.png">
+    </h4>
+    </div>
+</div>
+<div class="x2">
+        <div class="cloud"></div>
+    </div>
+    <div class="x3">
+        <div class="cloud"></div>
+    </div>
+
+</div>
+</body>
+
+</html>
